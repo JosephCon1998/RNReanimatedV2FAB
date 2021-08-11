@@ -1,23 +1,24 @@
-import React from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
-import FAB from './src/FAB/FAB'
-import SubButton from './src/SubButton/SubButton'
+import React from 'react';
+import { SafeAreaView, StyleSheet } from 'react-native';
+import { useSharedValue } from 'react-native-reanimated';
+import FAB from './src/FAB/FAB';
+import SubButton from './src/SubButton/SubButton';
 
 const App = () => {
+  const xPosition = useSharedValue(0);
+  const yPosition = useSharedValue(0);
+
   return (
     <SafeAreaView style={styles.root}>
-      <FAB />
-      <SubButton backgroundColor='#6adcd1' label='3' />
-      <SubButton backgroundColor='#6adcd1' label='2' />
-      <SubButton backgroundColor='#6adcd1' label='1' />
+      <FAB position={{ x: xPosition, y: yPosition }} />
     </SafeAreaView>
-  )
-}
+  );
+};
 
-export default App
+export default App;
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,    
-  }
-})
+    flex: 1,
+  },
+});
