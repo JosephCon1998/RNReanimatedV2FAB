@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import React from 'react';
+
 import {
   Alert,
   Image,
@@ -7,8 +8,7 @@ import {
   StyleSheet,
   View,
 } from 'react-native';
-import { useSharedValue } from 'react-native-reanimated';
-import { FAB_TAP_EVENT } from './src/FAB/Constants';
+
 import FAB from './src/FAB/FAB';
 import SubButton from './src/FAB/SubButton';
 
